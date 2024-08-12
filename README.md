@@ -13,6 +13,7 @@ By implementing customer segmentation, companies recognize that each customer ha
 Segmentation relies on analyzing key differentiators, including demographic, geographic, economic, and behavioral data. This analysis helps companies strategize their marketing techniques more efficiently, reducing investment risks and enhancing overall business performance.
 
 K-means Algorithm
+
 We specify the number of clusters that we need to create.
 The algorithm selects k objects at random from the dataset. This object is the initial cluster or mean.
 The closest centroid obtains the assignment of a new observation. We base this assignment on the Euclidean Distance between object and the centroid.
