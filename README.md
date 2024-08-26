@@ -6,16 +6,26 @@ This project aims to develop a customer segmentation model that categorizes cust
 ![Customer segmentation](https://github.com/user-attachments/assets/87c0fadd-5b89-4b79-95b6-dcb772cd5686)
 
 
-What is Customer Segmentation?
+## Process:
+1. **Loading and Exploring Data:**
+   - The dataset is loaded into a Pandas DataFrame.
+   - Basic exploratory data analysis is performed, including examining the first five rows, checking the data shape, and reviewing data information for insights.
 
-Customer segmentation is dividing a customer base into distinct groups based on shared characteristics relevant to marketing, such as gender, age, interests, and spending habits. This approach allows companies to tailor their marketing strategies to meet the specific needs of each group.
-By implementing customer segmentation, companies recognize that each customer has unique requirements and that targeted marketing efforts are necessary to address these effectively. This tailored approach helps companies better understand their customers, enabling them to identify valuable segments that can drive profitability.
-Segmentation relies on analyzing key differentiators, including demographic, geographic, economic, and behavioral data. This analysis helps companies strategize their marketing techniques more efficiently, reducing investment risks and enhancing overall business performance.
+2. **Data Preprocessing:**
+   - Missing values are checked and found to be absent.
+   - The relevant columns for clustering (Annual Income and Spending Score) are selected.
 
-K-means Algorithm
+3. **Determining Optimal Clusters:**
+   - The "Elbow Method" is employed to determine the optimal number of clusters.
+   - The Within-Cluster-Sum-of-Squares (WCSS) is plotted against the number of clusters.
 
-We specify the number of clusters that we need to create.
-The algorithm selects k objects at random from the dataset. This object is the initial cluster or mean.
-The closest centroid obtains the assignment of a new observation. We base this assignment on the Euclidean Distance between object and the centroid.
-k clusters in the data points update the centroid through calculation of the new mean values present in all the data points of the cluster. The kth cluster’s centroid has a - - Length of p that contains means of all variables for observations in the k-th cluster. We denote the number of variables with p.
-Iterative minimization of the total within the sum of squares. Then through the iterative minimization of the total sum of the square, the assignment stop wavering when we - - Achieve maximum iteration. The default value is 10 that the R software uses for the maximum iterations.
+4. **Training K-Means Model:**
+   - The K-means clustering model is trained with the optimal number of clusters determined from the elbow method.
+   - Labels are assigned to each data point based on their respective clusters.
+
+5. **Visualization:**
+   - The clustered data points are visualized in a scatter plot.
+   - Each cluster is represented by a distinct color, making it easy to discern different customer groups.
+   - The plot illustrates the relationship between Annual Income and Spending Score for each customer segment.
+     
+     ![image](https://github.com/pantakanch/Customer-Segmentation-using-K-Means-Clustering/assets/113978334/2a9ecf1c-d43f-4d13-b133-14d53f896e6c)
